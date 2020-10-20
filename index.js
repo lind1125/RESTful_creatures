@@ -11,6 +11,7 @@ app.get('/', (req, res)=>{
     res.render('home.ejs')
 })
 const dinosaurs = require('./controllers/dinosaurs')
+const creatures = require('./controllers/prehistoric_creatures')
 
 app.use('/dinosaurs', dinosaurs)
 
@@ -18,6 +19,9 @@ app.use('/dinosaurs/new', dinosaurs)
 
 app.use('/dinosaurs/show', dinosaurs)
 
+app.use('/prehistoric_creatures', creatures)
+app.use('/prehistoric_creatures/new', creatures)
+app.use('/prehistoric_creatures/show', creatures)
 
 
 app.listen(8000, ()=>{
